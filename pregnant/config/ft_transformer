@@ -1,0 +1,13 @@
+batch_size=1024
+num_layers=4
+channels=256    # transformer d_model
+gamma=1.2
+model_name='ft_transformer'
+
+model = FTTransformer(
+    cat_idxs=train_dataset.get_categorical_columns_idxs,
+    cat_dims=train_dataset.get_categorical_dims_idxs,
+    cat_emb_channels=3,
+    channels=channels,
+    num_layers=num_layers,
+).to(device)

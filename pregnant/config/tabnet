@@ -1,0 +1,17 @@
+batch_size=16384
+num_layers=6
+channels=128
+gamma=1.2
+model_name='TabNet'
+
+model = TabNet(
+    device=device,
+    num_cols=len(train_dataset.get_train_cols),
+    cat_idxs=train_dataset.get_categorical_columns_idxs,
+    cat_dims=train_dataset.get_categorical_dims_idxs,
+    cat_emb_channels=3,
+    num_layers=num_layers,
+    split_attn_channels=channels,
+    split_feat_channels=channels,
+    gamma=gamma
+).to(device)

@@ -1,0 +1,9 @@
+input_size = 3
+share_size = 256
+outsize = 64
+
+model = DNNBase(input_size, share_size, outsize, 
+                num_cols=len(train_dataset.get_train_cols), 
+                cat_idxs=train_dataset.get_categorical_columns_idxs, 
+                cat_dims=train_dataset.get_categorical_dims_idxs, 
+                cat_emb_dim=3).to(device)

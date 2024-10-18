@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "pregnant",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,    // 允许进入那些包里细看
+            "python": "/vepfs-sha/xiezixun/miniconda3/envs/pregnant/bin/python",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0,1",
+            },
+            "args": [
+
+            ]
+        }
+    ]
+}

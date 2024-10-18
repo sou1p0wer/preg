@@ -1,0 +1,11 @@
+{
+    "python.analysis.exclude": [
+        "/vepfs-sha/xiezixun/LLaVA/ckpt",
+        "/vepfs-sha/xiezixun/dataset",
+        "/vepfs-sha/xiezixun/exp",
+        "/vepfs-sha/xiezixun/wandb",
+        "/vepfs-sha/xiezixun/ckpt",
+        "/vepfs-sha/xiezixun/miniconda3"
+    ],
+    "python.languageServer": "Pylance"
+}

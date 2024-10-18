@@ -1,0 +1,18 @@
+batch_size=32768    # feat部分
+batch_size=2048 # 选择部分
+num_layers=6
+channels=128
+gamma=1.2
+model_name='TabNet_my'
+
+model = TabTransNet(
+    device=device,
+    num_cols=len(train_dataset.get_train_cols),
+    cat_idxs=train_dataset.get_categorical_columns_idxs,
+    cat_dims=train_dataset.get_categorical_dims_idxs,
+    cat_emb_channels=3,
+    num_layers=num_layers,
+    split_attn_channels=channels,
+    split_feat_channels=channels,
+    gamma=gamma
+).to(device_ids[0])
